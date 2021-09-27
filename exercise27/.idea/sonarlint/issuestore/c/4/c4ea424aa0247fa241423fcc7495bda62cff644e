@@ -1,0 +1,19 @@
+
+S
+java:S1854"=Remove this useless assignment to local variable "firstName".(Ó³ä
+D
+java:S1481".Remove this unused "firstName" local variable.(Ó³ä
+B
+java:S11726",Remove this unused method parameter "empID".(•øÖ™
+T
+java:S3400?"9Remove this method and declare a constant for this value.(´¤±äøÿÿÿÿ
+D
+java:S1172<".Remove this unused method parameter "zipCode".(ô«©
+T
+java:S3400E"9Remove this method and declare a constant for this value.(´¤±äøÿÿÿÿ
+E
+java:S1172B"/Remove this unused method parameter "lastName".(×¾£ñ
+T
+java:S3400K"9Remove this method and declare a constant for this value.(İ¹›–ıÿÿÿÿ
+K
+java:S1172H"0Remove this unused method parameter "firstName".(¼Ó›½ÿÿÿÿÿ
