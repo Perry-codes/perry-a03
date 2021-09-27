@@ -20,12 +20,7 @@ where
 • i is the daily rate (APR divided by 365).
 • b is the balance.
 • p is the monthly payment.
-Example Output
-What is your balance? 5000
 
-What is the APR on the card (as a percent)? 12
-What is the monthly payment you can make? 100
-It will take you 70 months to pay off this card.
 Constraints
 • Prompt for the card’s APR. Do the division internally.
 • Prompt for the APR as a percentage, not a decimal.
