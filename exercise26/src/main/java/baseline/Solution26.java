@@ -5,7 +5,10 @@
 
 package baseline;
 
+import java.util.Scanner;
+
 public class Solution26 {
+    private static final Scanner sc = new Scanner(System.in);
     /*
     Exercise 26 - Months to Pay Off a Credit Card
 It can take a lot longer to pay off your credit card balance than you might realize. And the formula for figuring
@@ -29,16 +32,21 @@ parameters and returns the number of months.
 • Round fractions of a cent up to the next cent when displaying information to the user.
      */
     public static void main(String[] args) {
-        //prompt for apr
-        double apr=nextdouble;
-
         //prompt for balance
-        double balance = nextdouble;
+        System.out.print("What is the balance?");
+        double balance = sc.nextDouble();
+
+        //prompt for apr
+        System.out.print("What is the APR on the card (as a percent)?");
+        double apr = sc.nextDouble();
 
         //prompt payment
-        double monthlyPayment = nextDouble;
+        System.out.print("What is the monthly payment you can make?");
+        double monthlyPayment = sc.nextDouble();
 
         //New payment object
-        PaymentCalculator paymentCalc = new PaymentCalculator(apr,balance,monthlyPayment);
+        PaymentCalculator p = new PaymentCalculator(apr,balance,monthlyPayment);
+
+        System.out.printf("It will take you %d months to pay off this card.",p.calculateMonthsUntilPaidOff());
     }
 }

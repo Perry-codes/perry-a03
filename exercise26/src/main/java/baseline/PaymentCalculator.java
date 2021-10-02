@@ -19,11 +19,12 @@ public class PaymentCalculator {
         this.monthlyPayment = monthlyPayment;
     }
 
-    public int PaymentCalculator() {
+    public int calculateMonthsUntilPaidOff() {
        //use equation n = -(1/30) * log(1 + b/p * (1 - (1 + i)^30)) / log(1 + i)
-
+        double constant = -(1.0 / 30.0);
+        double numMonths = constant * Math.log(1 + (balance/monthlyPayment)*(1 - Math.pow(1 + dailyRate,30))) / Math.log(1 + dailyRate);
         //Round fractions of a cent up to the next cent when displaying information to the user
-        return 0;
+        return (int) Math.ceil(numMonths);
 
     }
 }
