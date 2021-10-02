@@ -26,65 +26,17 @@ you can evaluate to determine the password strength.
  */
 
 public class Solution25 {
+
+    // Use Password class
+
     public static void main(String[] args) {
-//prompt user for password
-        static String password;
+        //prompt user for password
+        String password;
+        //send password to new password class
+        //Password class with return strength output string
 
-        //check if all numbers
-        allNumbers();
 
-        //check is fewer than 8 char
-        underEightChar();
-
-        //check if all letters
-        allLetters();
-
-        //check if special char
-        hasSpecialChar();
-
-        //check password strength
-        passwordValidator();
-
-        passwordStrength();
 
     }
-
-    public static String passwordStrength() {
-        //convert numeric passValidator int to strength string
-        return strengthString;
-    }
-
-    public static int passwordValidator(String password) {
-        //add number values for each parameter
-        //all numbers = 0 : 1
-        //fewer than 8 char = 0 : 1
-        //all letters = 1 : 2
-        //special char = 1 : 0
-        //allNUm + fewEight = 0 - V. weak
-        //allLet = fewEight = 1 - weak
-        //notAllNum + notAllLet + eightPlus = 4 - strong
-        //notAllNum + notAllLet + eightPlus + SpecChar = 5 - v strong
-        return 0;
-
-    }
-
-    public static boolean allNumbers() {
-        //check if all numbers
-        return true;
-    }
-
-    public static boolean underEightChar(String string) {
-        //check char count
-        return true;
-    }
-
-    public static boolean allLetters(String string) {
-        //chekc for all letters
-        return true;
-    }
-
-    public static boolean hasSpecialChar(String string) {
-        //search string for special character
-        return true;
-    }
+    
 }
