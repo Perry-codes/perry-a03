@@ -70,8 +70,11 @@ Constraints
 
     //std deviation function
     public void std() {
-        //learn how to calculate std deviation
+        //std deviation = sqrt ( sum ( i - array.average ) ^ 2 / array.length )
+
+
     }
+
 
 
 
