@@ -25,18 +25,23 @@ you can evaluate to determine the password strength.
 • Use a single output statement.
  */
 
-public class Solution25 {
+import java.util.Scanner;
 
+public class Solution25 {
+    public static final Scanner sc = new Scanner(System.in);
     // Use Password class
 
     public static void main(String[] args) {
         //prompt user for password
         String password;
+        System.out.println("Enter you password:");
+        password = sc.nextLine();
         //send password to new password class
+        PasswordCheck p = new PasswordCheck(password);
         //Password class with return strength output string
 
 
 
     }
-    
+
 }
