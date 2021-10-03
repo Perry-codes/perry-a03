@@ -54,12 +54,16 @@ Constraints
            } else {
                System.out.print("Invalid difficulty entry!\n\nDo you want to play again (y/n)");
                play = sc.nextLine().equals("y") || sc.nextLine().equals("Y");
+               sc.close();
            }
             }catch(NumberFormatException e){
                 System.out.print("Invalid difficulty entry!\n\nDo you want to play again (y/n)");
                 play = sc.nextLine().equals("y") || sc.nextLine().equals("Y");
+                sc.close();
             }
 
-        } sc.nextLine(); sc.close();
+        }
     }
+
+
 }

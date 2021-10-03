@@ -64,6 +64,7 @@ public class GuessingGame {
 
     public boolean playAgain(){
         System.out.print("\nDo you want to play again (y/n)");
-        return sc.nextLine().equals("y") || sc.nextLine().equals("Y");
+        String playAgain = sc.nextLine();
+        return playAgain.equals("y") || playAgain.equals("Y");
     }
 }
