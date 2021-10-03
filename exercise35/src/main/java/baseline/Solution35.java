@@ -5,10 +5,13 @@
 
 package baseline;
 
-import static com.sun.tools.classfile.Module_attribute.RequiresEntry.length;
+import java.util.ArrayList;
 
 public class Solution35 {
 
+    public Solution35(){
+
+    }
     /*
     Create a program that picks a winner for a contest or prize drawing. Prompt for names of contestants until the
 user leaves the entry blank. Then randomly select a winner.
@@ -22,9 +25,19 @@ data structure, like an ArrayList.
      */
 
     //var array for names
-    private String[] contestants = new String[];
-    private int winnerIndex;
+    private ArrayList contestants = new ArrayList();
 
+    public static void main(String[] args) {
+        //new class to run non-static methods
+        Solution35 s = new Solution35();
+
+        s.inputContestants();
+
+        int winningNumber = s.pickWinningNumber(s.contestants.size());
+
+        System.out.println(s.output(winningNumber));
+
+    }
 
     //populate array
     private void inputContestants() {
@@ -34,17 +47,17 @@ data structure, like an ArrayList.
     }
 
     //pick random number from 0 to array.length-1
-    public void pickWinningNumber(int maxNum) {
+    public int pickWinningNumber(int maxNum) {
         //get random number
         //set wining index variable
+        return maxNum;
     }
 
-    private void output() {
+    private String output(int winnerIndex) {
         //output string with winner
+        //array list uses get(index)
     }
 
 
-    public static void main(String[] args) {
 
-    }
 }
