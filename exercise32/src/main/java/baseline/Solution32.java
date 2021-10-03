@@ -5,7 +5,11 @@
 
 package baseline;
 
+import java.util.Scanner;
+
 public class Solution32 {
+
+    public static final Scanner sc = new Scanner(System.in);
 
     /*
     Exercise 32 - Guess the Number Game
@@ -20,31 +24,42 @@ Constraints
 • Don’t allow any non-numeric data entry.
 • During the game, count non-numeric entries as wrong guesses.
      */
-    static int difficulty;
-    static int winningNumber;
-    static int guessCounter;
-    static int maxGuess;
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
+       //boolean for play cycle at end
+       boolean play = true;
+        while (play){
 
-        //set the difficulty level
-        setDifficulty();
+            //set the difficulty level
+            System.out.print("Enter the difficulty level (1, 2, or 3):");
+            try{
+                int difficulty = sc.nextInt();
 
-        //pick random winning number
-        setWinningNumber(difficulty);
+           if(1 == difficulty) {
+               //launch game class with diff 1
+               GuessingGame game = new GuessingGame(1);
+               //prompt to play again
+               play = game.playAgain();
+           }else if (2 == difficulty){
+               //launch game class with diff 2
+               GuessingGame game = new GuessingGame(2);
+               //prompt to play again
+               play = game.playAgain();
+           }else if (3 == difficulty){
+               //launch game class with diff 3
+               GuessingGame game = new GuessingGame(3);
+               //prompt to play again
+               //prompt to play again
+               play = game.playAgain();
+           } else {
+               System.out.print("Invalid difficulty entry!\n\nDo you want to play again (y/n)");
+               play = sc.nextLine().equals("y") || sc.nextLine().equals("Y");
+           }
+            }catch(NumberFormatException e){
+                System.out.print("Invalid difficulty entry!\n\nDo you want to play again (y/n)");
+                play = sc.nextLine().equals("y") || sc.nextLine().equals("Y");
+            }
 
-        //launch guessing game with winning number and difficulty level
-        guessingGame();
-
-        //prompt for first guess
-
-        while(true){
-            //nextLine to guess();
-            //if true
-            break;
-
-        }
-        //output you got it in guesses
-        getGuessCount();
+        } sc.nextLine(); sc.close();
     }
 }

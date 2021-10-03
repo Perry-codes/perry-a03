@@ -1,7 +1,12 @@
 package baseline;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class GuessingGame {
 
+    private static final Scanner sc = new Scanner(System.in);
+    Random rand = new Random();
     private int difficulty;
     private int winningNumber;
     private int guessCount;
@@ -15,6 +20,10 @@ public class GuessingGame {
 
         //set winning number
         setWinningNumber();
+        guess();
+        //Output
+        System.out.printf("You got it in %d guesses.",guessCount);
+
     }
 
     private void setWinningNumber() {
@@ -22,22 +31,39 @@ public class GuessingGame {
         if(difficulty == 1) max = 10;
         else if(difficulty == 2) max = 100;
         else max = 1000;
-
-        this.winningNumber = (int) Math.floor(Math.random()*(max+1));
-
+        this.winningNumber = rand.nextInt(max)+ 1;
+        System.out.print("I have my number. What's your guess?");
     }
 
-    private boolean guess(String guess) {
-        //guess count +1
-
-        //try to parse input string to int
-        //if parse and matches winning num - output yay return true
-        //if parse and no match output high or low and return false
-        //catch format exception and return "bad input" and false
-        return false;
+    private void guess() {
+        while (true) {
+            //guess count +1
+            guessCount++;
+            String guessString = sc.nextLine();
+            //try to parse input string to int
+            try {
+                int guessNum = Integer.parseInt(guessString);
+                //if parse and matches winning num - output yay return true
+                if(guessNum == winningNumber){
+                    System.out.println("You Guessed It!");
+                    break;
+                }//if parse and no match output high or low and return false
+                else if(guessNum < winningNumber){
+                    System.out.print("Too low, guess again:");
+                }else System.out.print("Too high, guess again:");
+            }//catch format exception and return "bad input" and false
+            catch (NumberFormatException e) {
+                System.out.print("Invalid input, guess again:");
+            }
+        }
     }
 
     public int getGuessCount(){
         return guessCount;
+    }
+
+    public boolean playAgain(){
+        System.out.print("\nDo you want to play again (y/n)");
+        return sc.nextLine().equals("y") || sc.nextLine().equals("Y");
     }
 }
