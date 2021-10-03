@@ -6,11 +6,16 @@
 package baseline;
 
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Solution35 {
 
-    public Solution35(){
+    private static final Scanner sc = new Scanner(System.in);
+    private static final Random rand = new Random();
 
+    public Solution35(){
+        //allow class instance creation to use non-static methods
     }
     /*
     Create a program that picks a winner for a contest or prize drawing. Prompt for names of contestants until the
@@ -25,7 +30,8 @@ data structure, like an ArrayList.
      */
 
     //var array for names
-    private ArrayList contestants = new ArrayList();
+    public ArrayList<String> contestants = new ArrayList<>();
+
 
     public static void main(String[] args) {
         //new class to run non-static methods
@@ -33,7 +39,8 @@ data structure, like an ArrayList.
 
         s.inputContestants();
 
-        int winningNumber = s.pickWinningNumber(s.contestants.size());
+        int numContestants =  s.contestants.size();
+        int winningNumber = s.pickWinningNumber(numContestants);
 
         System.out.println(s.output(winningNumber));
 
@@ -41,21 +48,33 @@ data structure, like an ArrayList.
 
     //populate array
     private void inputContestants() {
+
         //loop do while
-        //prompt for contestant name
-        //if blank, exit, dont add blank
+        while(true){
+            //prompt for contestant name
+            //if blank, exit, dont add blank
+            System.out.print("Enter a name:");
+            String name = sc.nextLine();
+            if(name.equals("")) {
+                break;
+            }
+            contestants.add(name);
+        }
+        contestants.remove("");
+        contestants.trimToSize();
     }
 
     //pick random number from 0 to array.length-1
-    public int pickWinningNumber(int maxNum) {
+    private int pickWinningNumber(int maxNum) {
         //get random number
         //set wining index variable
-        return maxNum;
+        return rand.nextInt(maxNum);
     }
 
-    private String output(int winnerIndex) {
+    public String output(int winnerIndex) {
         //output string with winner
         //array list uses get(index)
+        return String.format("The winner is..... %s!",contestants.get(winnerIndex));
     }
 
 

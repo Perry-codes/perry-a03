@@ -1,0 +1,7 @@
+
+M	java:S106-"9Replace this use of System.out or System.err by a logger.(¸şél
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(¸¯¼ıÿÿÿÿ
+˜
+java:S1319!"vThe type of the "contestants" object should be an interface such as "List" rather than the implementation "ArrayList".(´Ÿä†úÿÿÿÿ8áé¿Ä/
+y
+java:S1104!"WMake contestants a static final constant or non-public and provide accessors if needed.(´Ÿä†úÿÿÿÿ8áé¿Ä/
