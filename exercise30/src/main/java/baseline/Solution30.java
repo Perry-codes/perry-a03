@@ -16,16 +16,10 @@ public class Solution30 {
      */
     public static void main(String[] args) {
 
-        //just call multiplication table
-        multiplicationTable();
+        //call mult table class with table size
+        MultiplicationTable m = new MultiplicationTable(12);
 
 
     }
 
-    public static void multiplicationTable() {
-        //read in max value for table
-        //find out the max space needed for largest value+2
-        //loop 2 layer loop for multiplication and print out result
-        //use integer formatting to space results
-    }
 }
