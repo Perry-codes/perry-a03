@@ -5,7 +5,14 @@
 
 package baseline;
 
+import java.util.Scanner;
+
 public class Solution34 {
+    private static final Scanner sc = new Scanner(System.in);
+
+    public Solution34(){
+
+    }
 
     /*
     Create a small program that contains a list of employee names. Print out the list of names when the program
@@ -16,20 +23,21 @@ Constraint
 • Use an array or list to store the names.
      */
 
-    //create array to hold employee list
-    private String[] employeeList = new String[5];
-
-    //hard code employees to array
-
-    public static void main(String[] args) {
-
+     public static void main(String[] args) {
+        String[] employeeList = new String[]{"Lara Croft","Lisbeth Salander","Natasha Romanoff","Sarah Connor","Ellen Ripley"};
+        //new employee list with hard coded array
+        EmployeeList e = new EmployeeList(employeeList);
         //prompt employee for name to remove
+        System.out.print("Which of these badass women do you want to remove?");
+        String removePerson = sc.nextLine();
 
         //find index matching remove command
-        findRemoveIndex();
+        //int removeIndex = findRemoveIndex(removePerson);
 
         //remove name from index;
 
 
     }
+
+   
 }
