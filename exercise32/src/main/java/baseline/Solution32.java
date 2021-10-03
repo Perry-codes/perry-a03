@@ -36,34 +36,15 @@ Constraints
         //launch guessing game with winning number and difficulty level
         guessingGame();
 
-        //
-    }
+        //prompt for first guess
 
-    private static void setDifficulty() {
-        //prompt user for difficulty 1,2,3
-        //do, while loop to make sure input is 1,2,or3
-        difficulty = input;
-        //maxGuess = 10,100,1000;
-    }
+        while(true){
+            //nextLine to guess();
+            //if true
+            break;
 
-    public static int setWinningNumber(int difficulty) {
-        //return random int to the difficult level digits
-        /*The first level of difficulty would be a number
-between 1 and 10. The second difficulty set would be between 1 and 100. The third difficulty set would be
-between 1 and 1000.*/
-        return 0;
-    }
-
-    private static void guessingGame() {
-        //prompt user for guess
-        //do while loop to re-prompt if not between 1 and max
-        //check if guess is correct
-        guessCheck();
-    }
-
-    public static boolean guessCheck() {
-        //increment guessCounter++
-        //guess is winning number?
-        return true;
+        }
+        //output you got it in guesses
+        getGuessCount();
     }
 }
