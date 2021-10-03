@@ -5,9 +5,23 @@
 
 package baseline;
 
+import java.util.Scanner;
+
 public class Solution31 {
-static int restingPulse;
-static int age;
+    public static final Scanner sc = new Scanner(System.in);
+    private int restingPulse;
+    private int age;
+
+    //class constructor
+    public Solution31(){
+        this.restingPulse = inputPulse();
+        this.age = inputAge();
+    }
+    //alt constructor for hard coding test values
+    public Solution31(int restingPulse, int age){
+        this.restingPulse = restingPulse;
+        this.age = age;
+    }
     /*
     The Karvonen heart rate formula is one method you can use to determine your rate. Create a program
 that prompts for your age and your resting heart rate. Use the Karvonen formula to determine the target heart
@@ -23,41 +37,65 @@ entering valid inputs.
 
      */
     public static void main(String[] args) {
+        Solution31 s = new Solution31();
+        //class constructor prompts for restingPulse and age
 
-        //prompt user for resting pulse, use function to verify input
-        restingPulse = inputPulse();
-        //prompt user for age, use function to verify input
-        age = inputAge();
+        //print table
+        s.karvonenHRTable();
 
+
+    }
+
+    private int inputAge() {
+        //do: ask for input
+        //while: input is not int
+        while (true) {
+            //prompt for age
+            System.out.print("What is your age?");
+            if (sc.hasNextInt()) {
+                age = sc.nextInt();
+                //return int
+                return age;
+            } else {
+                System.out.println("Integer year age please.");
+                sc.nextLine();
+            }
+        }
+    }
+
+    private int inputPulse () {
+        //do: ask for input
+        //while: input is not int
+        while (true) {
+            //prompt for age
+            System.out.print("What is your resting heart rate?");
+            if (sc.hasNextInt()) {
+                restingPulse = sc.nextInt();
+                //return int
+                return restingPulse;
+            } else {
+                System.out.println("Integer heart rate please.");
+                sc.nextLine();
+            }
+        }
+    }
+
+    private void karvonenHRTable () {
         //create output table
-        karvonenHRTable();
-
+        //output header
+        System.out.printf("Intensity   | Rate    %n------------|---------%n");
+        //create new rows
+        for( int i = 55; i < 100; i += 5){
+            System.out.printf("%-11s | %s%n",i + "%",karvonenHR(i));
+        }
     }
 
-
-
-    private static int inputAge() {
-        //do: ask for input
-        //while: input is not int
-        //return int
-        return 0;
-    }
-
-    private static int inputPulse() {
-        //do: ask for input
-        //while: input is not int
-        //return int
-        return 0;
-    }
-
-    public static void karvonenHRTable() {
-        //loop starting at 55 up by 5 till 95
-        //intensity - calculate HR
-        karvonenHR();
-    }
-
-    public static int karvonenHR() {
+    public String karvonenHR ( int intensity){
         //TargetHeartRate = (((220 − age) − restingHR) × intensity) + restingHR
-        return 0;
+        int targetHeartRate =(int) (((220 - age) - restingPulse) * intensity/100.0) + restingPulse;
+
+        return String.format("%d bpm",targetHeartRate);
+
     }
+
 }
