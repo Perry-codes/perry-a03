@@ -8,21 +8,12 @@ package baseline;
 import java.util.Scanner;
 
 public class Solution28 {
-
-    //solution class for testing
-    public void Solution28(){
-
-    }
-
-    /*
-    Write a program that prompts the user for five numbers and computes the total of the numbers.
-
-    Constraints
-• The prompting must use repetition, such as a counted loop, not three separate prompts.
-     */
     //Scanner for user input
     public static final Scanner sc = new Scanner(System.in);
 
+    public Solution28(){
+        //solution class constructor for testing
+    }
 
     public static void main(String[] args) {
         //use array to store 5 numbers
@@ -42,9 +33,7 @@ public class Solution28 {
         //send array to add function
         //new solution class to use non static methods
         Solution28 s = new Solution28();
-        //addNumbers(fiveNumberArray);
         System.out.printf("The total is %.2f.",s.addNumbers(array));
-
     }
 
     public double addNumbers(double[] fiveNumberArray) {

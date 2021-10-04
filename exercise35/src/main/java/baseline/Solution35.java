@@ -10,28 +10,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Solution35 {
-
     private static final Scanner sc = new Scanner(System.in);
     private static final Random rand = new Random();
+    public ArrayList<String> contestants = new ArrayList<>();
 
     public Solution35(){
         //allow class instance creation to use non-static methods
     }
-    /*
-    Create a program that picks a winner for a contest or prize drawing. Prompt for names of contestants until the
-user leaves the entry blank. Then randomly select a winner.
-
-Constraints
-• Use a loop to capture user input into an array.
-• Use a random number generator to pluck a value from the array.
-• Don’t include a blank entry in the array.
-• Some languages require that you define the length of the array ahead of time. You may need to find another
-data structure, like an ArrayList.
-     */
-
-    //var array for names
-    public ArrayList<String> contestants = new ArrayList<>();
-
 
     public static void main(String[] args) {
         //new class to run non-static methods
@@ -43,18 +28,15 @@ data structure, like an ArrayList.
         int winningNumber = s.pickWinningNumber(numContestants);
 
         System.out.println(s.output(winningNumber));
-
     }
-
     //populate array
     private void inputContestants() {
-
-        //loop do while
+        //loop while
         while(true){
             //prompt for contestant name
-            //if blank, exit, dont add blank
             System.out.print("Enter a name:");
             String name = sc.nextLine();
+            //if blank, exit, dont add blank
             if(name.equals("")) {
                 break;
             }
@@ -76,7 +58,4 @@ data structure, like an ArrayList.
         //array list uses get(index)
         return String.format("The winner is..... %s!",contestants.get(winnerIndex));
     }
-
-
-
 }

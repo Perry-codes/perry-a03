@@ -2,7 +2,7 @@ package baseline;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+//import java.util.ArrayList; for self testing
 
 import static org.junit.jupiter.api.Assertions.*;
 

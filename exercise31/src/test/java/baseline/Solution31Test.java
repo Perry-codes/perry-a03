@@ -7,11 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Solution31Test {
 
     @Test
-    void karvonenHRTable() {
-        //private output only method
-    }
-
-    @Test
     void karvonenHR1() {
         //push pulse age and intensity, check return
         //TargetHeartRate = (((220 − age) − restingHR) × intensity) + restingHR

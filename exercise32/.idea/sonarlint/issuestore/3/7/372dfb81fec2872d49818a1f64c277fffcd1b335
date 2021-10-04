@@ -1,8 +1,9 @@
 
-S	java:S106"9Replace this use of System.out or System.err by a logger.(¢šåÅùÿÿÿÿ
-N	java:S106#"9Replace this use of System.out or System.err by a logger.(“ï¼ø
-S	java:S1060"9Replace this use of System.out or System.err by a logger.(ÿÓˆùÿÿÿÿ
-N	java:S1064"9Replace this use of System.out or System.err by a logger.(˜úÇï
-S	java:S1065"9Replace this use of System.out or System.err by a logger.(¨“©”ÿÿÿÿÿ
-M	java:S1068"9Replace this use of System.out or System.err by a logger.(Î©‡u
-N	java:S106B"9Replace this use of System.out or System.err by a logger.(Ü¹ì
+N	java:S106"9Replace this use of System.out or System.err by a logger.(“ï¼ø
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(ÿÓˆùÿÿÿÿ
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(˜úÇï
+S	java:S106."9Replace this use of System.out or System.err by a logger.(¨“©”ÿÿÿÿÿ
+M	java:S1061"9Replace this use of System.out or System.err by a logger.(Î©‡u
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(Ü¹ì
+v
+java:S1104"YMake winningNumber a static final constant or non-public and provide accessors if needed.(Ğ²µÕ8»Î×ÆÄ/

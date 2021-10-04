@@ -10,45 +10,25 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Solution36 {
-
     private static final Scanner sc = new Scanner(System.in);
+    //integer arrayList to store inputs
+    private ArrayList<Integer> numberArray = new ArrayList<>();
 
     //make class constructor with array input for testing
     public Solution36(ArrayList<Integer> numberArray){
         this.numberArray = numberArray;
     }
-    //make empty constructor or main run use
+
     public Solution36(){
-
+        //make empty constructor or main run use
     }
-
-
-    /*
-    Write a program that prompts for response times from a website in milliseconds. It should keep asking for
-values until the user enters done.
-The program should print the average time (mean), the minimum time, the maximum time, and the population
-standard deviation.
-
-Constraints
-• Create functions called average , max , min , and std , which take in a list of numbers and return the results.
-• Use loops and arrays to perform the input and mathematical operations.
-• Be sure to exclude the "done" entry from the inputs.
-• Be sure to properly ignore any invalid inputs.
-• Keep the input separate from the processing and the output.
-     */
-
-    //integer arrayList to store inputs
-    private ArrayList<Integer> numberArray = new ArrayList<>();
-
 
     public static void main(String[] args) {
         //create class to run non-static methods
         Solution36 s = new Solution36();
         s.inputArray();
         System.out.println(s);
-
     }
-
     //input numbers to array
     public void inputArray() {
         while(true){
@@ -66,7 +46,6 @@ Constraints
             }
         }
     }
-
     //average function
     public double average(List<Integer> avgArray) {
         //loop to count number of inputs and add inputs
@@ -79,7 +58,6 @@ Constraints
 
         return (double)sum / avgArray.size();
     }
-
     //max function
     public int max(List<Integer> maxArray) {
         //set int max = 0
@@ -90,7 +68,6 @@ Constraints
         }
         return max;
     }
-
     //min function
     public int min(List<Integer> minArray) {
         //set int min = to first array value numberArray[0]
@@ -101,7 +78,6 @@ Constraints
         }
         return min;
     }
-
     //std deviation function
     public double std(List<Integer> stdArray) {
         //std deviation = sqrt ( sum ( i - array.average ) ^ 2 / array.length )
@@ -120,7 +96,4 @@ Constraints
         return String.format("Numbers: %s%nThe average is %.2f%nThe minimum is %d%nThe maximum is %d%nThe standard deviation is %.2f",
                 numberArray.toString(),average(numberArray),min(numberArray),max(numberArray),std(numberArray));
     }
-
-
-
 }

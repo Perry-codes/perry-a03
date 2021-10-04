@@ -38,6 +38,11 @@ Constraints
            if(1 == difficulty) {
                //launch game class with diff 1
                GuessingGame game = new GuessingGame(1);
+               //set winning number
+               game.setWinningNumber();
+               game.guess();
+               //Output
+               System.out.printf("You got it in %d guesses.",game.getGuessCount());
                //prompt to play again
                play = game.playAgain();
            }else if (2 == difficulty){

@@ -1,13 +1,11 @@
 
-N	java:S106 "9Replace this use of System.out or System.err by a logger.(Â ê
-N	java:S106#"9Replace this use of System.out or System.err by a logger.(€™±
-S	java:S106&"9Replace this use of System.out or System.err by a logger.(ÑŞ½ûÿÿÿÿ
-M	java:S106)"9Replace this use of System.out or System.err by a logger.(œºµU
-U	java:S106@"9Replace this use of System.out or System.err by a logger.(ºğ£8ÇÕ™Ä/
-P	java:S125?"<This block of commented-out lines of code should be removed.(ŞÇ
-C
-java:S1144D"-Remove this unused private "noErrors" method.(ÃÔ›Ï
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Â ê
+N	java:S106"9Replace this use of System.out or System.err by a logger.(€™±
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÑŞ½ûÿÿÿÿ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(œºµU
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(ºğ£8ÇÕ™Ä/
+P	java:S125/"<This block of commented-out lines of code should be removed.(ŞÇ
 O
-java:S4973i"9Use the "equals" method if value comparison was intended.(ºÒÉ·
+java:S4973S"9Use the "equals" method if value comparison was intended.(ºÒÉ·
 O
-java:S4973r"9Use the "equals" method if value comparison was intended.(¢©¸ø
+java:S4973\"9Use the "equals" method if value comparison was intended.(¢©¸ø

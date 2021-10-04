@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class GuessingGame {
 
     private static final Scanner sc = new Scanner(System.in);
-    Random rand = new Random();
+    private final Random rand = new Random();
     private int difficulty;
-    private int winningNumber;
+    public int winningNumber; //set public for testing
     private int guessCount;
 
     //class constructor to launch class with difficulty set
@@ -17,16 +17,9 @@ public class GuessingGame {
         this.difficulty = difficulty;
         //start guess count at 0
         this.guessCount = 0;
-
-        //set winning number
-        setWinningNumber();
-        guess();
-        //Output
-        System.out.printf("You got it in %d guesses.",guessCount);
-
     }
 
-    private void setWinningNumber() {
+    public void setWinningNumber() {
         int max;
         if(difficulty == 1) max = 10;
         else if(difficulty == 2) max = 100;
@@ -35,7 +28,7 @@ public class GuessingGame {
         System.out.print("I have my number. What's your guess?");
     }
 
-    private void guess() {
+    public void guess() {
         while (true) {
             //guess count +1
             guessCount++;

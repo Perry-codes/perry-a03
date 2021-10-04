@@ -22,20 +22,7 @@ public class Solution31 {
         this.restingPulse = restingPulse;
         this.age = age;
     }
-    /*
-    The Karvonen heart rate formula is one method you can use to determine your rate. Create a program
-that prompts for your age and your resting heart rate. Use the Karvonen formula to determine the target heart
-rate based on a range of intensities from 55% to 95%. Generate a table with the results as shown in the
-example output. The formula is
-TargetHeartRate = (((220 − age) − restingHR) × intensity) + restingHR
 
-Constraints
-• Don’t hard-code the percentages. Use a loop to increment the percentages from 55 to 95.
-• Ensure that the heart rate and age are entered as numbers. Don’t allow the user to continue without
-entering valid inputs.
-• Display the results in a tabular format.
-
-     */
     public static void main(String[] args) {
         Solution31 s = new Solution31();
         //class constructor prompts for restingPulse and age
@@ -95,7 +82,5 @@ entering valid inputs.
         int targetHeartRate =(int) (((220 - age) - restingPulse) * intensity/100.0) + restingPulse;
 
         return String.format("%d bpm",targetHeartRate);
-
     }
-
 }

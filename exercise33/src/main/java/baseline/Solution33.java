@@ -11,16 +11,6 @@ public class Solution33 {
 
     public static final Scanner sc = new Scanner(System.in);
     public static Random rand = new Random();
-
-    /*
-    Create a Magic 8 Ball game that prompts for a question and then displays either "Yes," "No," "Maybe," or "Ask
-again later."
-
-Constraint
-• The value should be chosen randomly using a pseudo random number generator. Store the possible
-choices in a list and select one at random.
-     */
-    //array to hold possible responses and hard code responses
     private String[] responses = new String[]{"Absolutely!","Fat Chance!","Eh, who knows?","Beep boop I AM ROBOT GROOT"};
     private int responseNumber;
 

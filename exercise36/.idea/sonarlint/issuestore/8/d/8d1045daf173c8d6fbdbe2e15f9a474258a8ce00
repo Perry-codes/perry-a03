@@ -1,6 +1,6 @@
 
-S	java:S1060"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ
-U	java:S1068"9Replace this use of System.out or System.err by a logger.(ÖáõÓ8£éøÂÄ/
-U	java:S106A"9Replace this use of System.out or System.err by a logger.(¬•¥8¦Ú¾ÃÄ/
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(ÖáõÓ8£éøÂÄ/
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(¬•¥8¦Ú¾ÃÄ/
 Œ
-java:S1319"vThe type of the "numberArray" object should be an interface such as "List" rather than the implementation "ArrayList".(ÊêØœ
+java:S1319"vThe type of the "numberArray" object should be an interface such as "List" rather than the implementation "ArrayList".(ÊêØœ

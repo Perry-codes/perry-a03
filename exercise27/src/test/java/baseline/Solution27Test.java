@@ -35,7 +35,7 @@ class Solution27Test {
     void validateFirstName() {
         //input string return string
         Solution27 s = new Solution27();
-        String fNameNullError = "The last name must be at least 2 characters long.\n";
+        String fNameNullError = "The first name must be at least 2 characters long.\n";
         assertEquals(fNameNullError,s.validateFirstName("M"));
     }
 }

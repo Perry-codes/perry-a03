@@ -11,22 +11,6 @@ public class Solution27 {
     //Scaner for user input
     private static final Scanner sc = new Scanner(System.in);
 
-    /*
-   Write a program that prompts for a first name, last name, employee ID, and ZIP code. Ensure that the input is
-valid according to these rules:
-• The first name must be filled in.
-• The last name must be filled in.
-• The first and last names must be at least two characters long.
-• An employee ID is in the format AA-1234. So, two letters, a hyphen, and four numbers.
-• The ZIP code must be a number.
-Display appropriate error messages on incorrect data.
-
-Constraints
-• Create a function for each validation rule. Then create a validateInput function that takes in all of the input
-data and invokes the specific validation functions.
-• Use a single output statement to display the outputs.
-    */
-
     public static void main(String[] args) {
         //prompt first name
         System.out.print("Enter the first name:");
@@ -62,12 +46,6 @@ data and invokes the specific validation functions.
         String singleString = (outputString.isEmpty() ? "No errors were found." : outputString.toString());
         //output();
         System.out.printf("%s",singleString);
-    }
-
-    //function to determine if there are any errors
-    private boolean noErrors(){
-
-        return true;
     }
 
     public String validateEmpID(String empID) {
